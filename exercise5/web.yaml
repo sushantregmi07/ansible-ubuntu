@@ -1,0 +1,21 @@
+---
+- name: Webserver Setup
+  hosts: webservers
+  become: yes
+  tasks:
+    - name: Installing httpd
+      ansible.builtin.yum:
+        name: httpd
+        state: present
+
+    - name: Starting Service and Enabaling
+      ansible.builtin.service:
+        name: httpd
+        state: started
+        enabled: yes
+
+    - name: Copy index file
+      copy:
+        src: files/index.html
+        dest: /var/www/html/index.html
+        backup: yes

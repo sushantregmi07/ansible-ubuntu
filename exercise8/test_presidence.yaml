@@ -2,6 +2,7 @@
 - name: Understanding Variables
   hosts: all
   become: yes
+  gather_facts: False
     #vars:
     # USRNM: playbook
     # COMM: Straight oughta Playbook

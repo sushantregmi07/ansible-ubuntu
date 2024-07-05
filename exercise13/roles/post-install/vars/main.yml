@@ -1,0 +1,10 @@
+---
+# vars file for post-install
+USRNM: all
+COMM: straight oughta all group
+ntp_centos: 2.centos.pool.ntp.org
+ntp_ubuntu0: 0.ubuntu.pool.ntp.org
+ntp_ubuntu1: 1.ubuntu.pool.ntp.org
+ntp_ubuntu2: 2.ubuntu.pool.ntp.org
+ntp_ubuntu3: 3.ubuntu.pool.ntp.org
+mydir: /opt/dir22

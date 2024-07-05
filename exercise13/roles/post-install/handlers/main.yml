@@ -1,0 +1,15 @@
+---
+# handlers file for post-install
+- name: reStarting NTP Agent in CentOS
+  service:
+    name: chronyd
+    state: restarted
+    enabled: yes
+  when: ansible_distribution == "CentOS"
+
+- name: reStarting NTP Agent in Ubuntu
+  service:
+    name: ntp
+    state: restarted
+    enabled: yes
+  when: ansible_distribution == "Ubuntu"
